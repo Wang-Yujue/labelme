@@ -4,8 +4,6 @@ import argparse
 import glob
 import json
 import os
-import os.path as osp
-
 import numpy as np
 import PIL.Image
 
@@ -21,10 +19,10 @@ def main():
     parser.add_argument('--labels', help='labels file', required=False)
     args = parser.parse_args()
 
-    if not osp.exists(args.output_dir):
+    if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
-        os.makedirs(osp.join(args.output_dir, 'SegmentationClassPNG'))
-        os.makedirs(osp.join(args.output_dir, 'SegmentationClassVisualization'))
+        os.makedirs(os.path.join(args.output_dir, 'SegmentationClassPNG'))
+        os.makedirs(os.path.join(args.output_dir, 'SegmentationClassVisualization'))
         print('Creating dataset:', args.output_dir)
 
     class_names = []
@@ -40,20 +38,20 @@ def main():
 
     colormap = labelme.utils.label_colormap(255)
 
-    for label_file in glob.glob(osp.join(args.input_dir, '*.json')):
+    for label_file in glob.glob(os.path.join(args.input_dir, '*.json')):
         print('Generating dataset from:', label_file)
         with open(label_file) as f:
-            base = osp.splitext(osp.basename(label_file))[0]
-            out_png_file = osp.join(
+            base = os.path.splitext(os.path.basename(label_file))[0]
+            out_png_file = os.path.join(
                 args.output_dir, 'SegmentationClassPNG', base + '.png')
-            out_viz_file = osp.join(
+            out_viz_file = os.path.join(
                 args.output_dir,
                 'SegmentationClassVisualization',
                 base + '.jpg')
 
             data = json.load(f)
 
-            img_file = osp.join(osp.dirname(label_file), data['imagePath'])
+            img_file = os.path.join(os.path.dirname(label_file), data['imagePath'])
             img = np.asarray(PIL.Image.open(img_file))
 
             lbl = labelme.utils.shapes_to_label(
