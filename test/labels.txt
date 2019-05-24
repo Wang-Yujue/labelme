@@ -1,0 +1,5 @@
+background
+person
+table
+window
+head
