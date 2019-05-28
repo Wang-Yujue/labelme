@@ -23,7 +23,7 @@ def converter():
         # convert tif to jpg
         save_name = img.split('/')[-1].replace('tif', 'jpg')
         save_dir = os.path.join(args.output_dir, save_name)
-        # make image brighter by a factor of 5
+        # make image brighter by a factor of 10
         tiff = tiff * 10
         cv2.imwrite(save_dir, tiff)
 
