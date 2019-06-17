@@ -8,8 +8,8 @@ def converter():
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
-    parser.add_argument('input_dir', default='test/dataset', help='input dataset directory')
-    parser.add_argument('output_dir', default='test/dataset', help='output dataset directory')
+    parser.add_argument('input_dir', help='input dataset directory')
+    parser.add_argument('output_dir', default='dataset', help='output dataset directory')
     args = parser.parse_args()
 
     if not os.path.exists(args.output_dir):

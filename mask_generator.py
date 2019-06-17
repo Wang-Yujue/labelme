@@ -19,9 +19,12 @@ def main():
 
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
+
+    if not os.path.exists(os.path.join(args.output_dir, 'SegmentationClassPNG')):
         os.makedirs(os.path.join(args.output_dir, 'SegmentationClassPNG'))
+
+    if not os.path.exists(os.path.join(args.output_dir, 'SegmentationClassVisualization')):
         os.makedirs(os.path.join(args.output_dir, 'SegmentationClassVisualization'))
-        print('Creating dataset:', args.output_dir)
 
     class_names = []
     class_name_to_id = {}
