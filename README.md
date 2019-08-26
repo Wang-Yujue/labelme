@@ -10,6 +10,7 @@
   <a href="https://pypi.python.org/pypi/labelme"><img src="https://img.shields.io/pypi/v/labelme.svg"></a>
   <a href="https://pypi.org/project/labelme"><img src="https://img.shields.io/pypi/pyversions/labelme.svg"></a>
   <a href="https://travis-ci.org/wkentaro/labelme"><img src="https://travis-ci.org/wkentaro/labelme.svg?branch=master"></a>
+  <a href="https://hub.docker.com/r/wkentaro/labelme"><img src="https://hub.docker.com/r/wkentaro/labelme"></a>
 </div>
 
 <br/>
