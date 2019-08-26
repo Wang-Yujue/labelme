@@ -20,7 +20,7 @@
 Labelme is a graphical image annotation tool inspired by <http://labelme.csail.mit.edu>.  
 It is written in Python and uses Qt for its graphical interface.
 
-<i>Other examples (semantic segmentation, bbox detection, and classification).</i>
+<i>Examples (semantic segmentation, bbox detection, and classification).</i>
 
 <img src="https://user-images.githubusercontent.com/4310419/47907116-85667800-de82-11e8-83d0-b9f4eb33268f.gif" width="30%" /> <img src="https://user-images.githubusercontent.com/4310419/47922172-57972880-deae-11e8-84f8-e4324a7c856a.gif" width="30%" /> <img src="https://user-images.githubusercontent.com/14256482/46932075-92145f00-d080-11e8-8d09-2162070ae57c.png" width="32%" />  
 <i>Various primitives (polygon, rectangle, circle, line, and point).</i>
