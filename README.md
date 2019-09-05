@@ -35,6 +35,35 @@ It is written in Python and uses Qt for its graphical interface.
 - [x] Exporting COCO-format dataset for instance segmentation. ([instance segmentation](examples/instance_segmentation))
 
 
+## Usage
+
+Run `labelme --help` for detail.  
+The annotations are saved as a [JSON](http://www.json.org/) file.
+
+```bash
+labelme  # just open gui
+
+# semantic segmentation example
+cd examples/semantic_segmentation
+
+# Open directory to annotate all images in it and specify label list with a file
+labelme data_annotated/ --labels labels.txt  
+
+# labelme does not accept .tif inputs, first convert tif format to jpg
+python format_converter.py input_dir output_dir
+
+# after finishing labeling, generate mask from .json
+python mask_generator.py input_dir output_dir --labels labels.txt
+
+```
+
+For more advanced usage, please refer to the examples:
+
+* [Tutorial (Single Image Example)](examples/tutorial)
+* [Semantic Segmentation Example](examples/semantic_segmentation)
+* [Instance Segmentation Example](examples/instance_segmentation)
+* [Video Annotation Example](examples/video_annotation)
+
 
 ## Requirements
 
@@ -120,36 +149,6 @@ Firstly, follow instruction in [Anaconda](#anaconda).
 # https://github.com/wkentaro/labelme/pull/174
 conda install pillow=4.0.0
 ```
-
-
-## Usage
-
-Run `labelme --help` for detail.  
-The annotations are saved as a [JSON](http://www.json.org/) file.
-
-```bash
-labelme  # just open gui
-
-# tutorial (single image example)
-cd examples/tutorial
-labelme apc2016_obj3.jpg  # specify image file
-labelme apc2016_obj3.jpg -O apc2016_obj3.json  # close window after the save
-labelme apc2016_obj3.jpg --nodata  # not include image data but relative image path in JSON file
-labelme apc2016_obj3.jpg \
-  --labels highland_6539_self_stick_notes,mead_index_cards,kong_air_dog_squeakair_tennis_ball  # specify label list
-
-# semantic segmentation example
-cd examples/semantic_segmentation
-labelme data_annotated/  # Open directory to annotate all images in it
-labelme data_annotated/ --labels labels.txt  # specify label list with a file
-```
-
-For more advanced usage, please refer to the examples:
-
-* [Tutorial (Single Image Example)](examples/tutorial)
-* [Semantic Segmentation Example](examples/semantic_segmentation)
-* [Instance Segmentation Example](examples/instance_segmentation)
-* [Video Annotation Example](examples/video_annotation)
 
 ### Command Line Arguemnts
 - `--output` specifies the location that annotations will be written to. If the location ends with .json, a single annotation will be written to this file. Only one image can be annotated if a location is specified with .json. If the location does not end with .json, the program will assume it is a directory. Annotations will be stored in this directory with a name that corresponds to the image that the annotation was made on.
