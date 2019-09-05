@@ -25,16 +25,6 @@ It is written in Python and uses Qt for its graphical interface.
 <i>Various primitives (polygon, rectangle, circle, line, and point).</i>
 
 
-## Features
-
-- [x] Image annotation for polygon, rectangle, circle, line and point. ([tutorial](examples/tutorial))
-- [x] Image flag annotation for classification and cleaning. ([#166](https://github.com/wkentaro/labelme/pull/166))
-- [x] Video annotation. ([video annotation](examples/video_annotation))
-- [x] GUI customization (predefined labels / flags, auto-saving, label validation, etc). ([#144](https://github.com/wkentaro/labelme/pull/144))
-- [x] Exporting VOC-format dataset for semantic/instance segmentation. ([semantic segmentation](examples/semantic_segmentation), [instance segmentation](examples/instance_segmentation))
-- [x] Exporting COCO-format dataset for instance segmentation. ([instance segmentation](examples/instance_segmentation))
-
-
 ## Usage
 
 Run `labelme --help` for detail.  
@@ -60,6 +50,13 @@ For more advanced usage, please refer to the examples:
 * [Semantic Segmentation Example](examples/semantic_segmentation)
 * [Instance Segmentation Example](examples/instance_segmentation)
 * [Video Annotation Example](examples/video_annotation)
+
+
+## Features
+
+- [x] Image annotation for polygon, rectangle, circle, line and point. ([tutorial](examples/tutorial))
+- [x] GUI customization (predefined labels / flags, auto-saving, label validation, etc). ([#144](https://github.com/wkentaro/labelme/pull/144))
+- [x] Exporting VOC-format dataset for semantic/instance segmentation. ([semantic segmentation](examples/semantic_segmentation), [instance segmentation](examples/instance_segmentation))
 
 
 ## Requirements
