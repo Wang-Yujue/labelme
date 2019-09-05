@@ -44,10 +44,8 @@ The annotations are saved as a [JSON](http://www.json.org/) file.
 labelme  # just open gui
 
 # semantic segmentation example
-cd examples/semantic_segmentation
-
 # Open directory to annotate all images in it and specify label list with a file
-labelme data_annotated/ --labels labels.txt  
+labelme example_semantic_segmentation/data_annotated/ --labels labels.txt  
 
 # labelme does not accept .tif inputs, first convert tif format to jpg
 python format_converter.py input_dir output_dir
