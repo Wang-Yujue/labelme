@@ -32,7 +32,7 @@ The annotations are saved as a [JSON](http://www.json.org/) file.
 
 ```bash
 # labelme does not accept .tif inputs, first convert tif format to jpg
-python format_converter.py 'input_dir_of_tif' 'output_dir_of_jpg'
+python format_converter.py 'input_dir_tif' 'output_dir_jpg'
 
 # semantic segmentation example
 # Open directory to annotate all images in it and specify label list with a file
