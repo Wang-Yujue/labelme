@@ -1,5 +1,4 @@
-__ignore__
-_background_
+background
 aeroplane
 bicycle
 bird
@@ -20,3 +19,4 @@ sheep
 sofa
 train
 tv/monitor
+__ignore__
